@@ -1,0 +1,464 @@
+:root {
+    --primary_fit_bgColor: #e8f5f5;
+    --primary_fit_txtColor: #9bd1cf;
+    --secondary_fit_txtColor: #666666;
+    --healthcare_color: #eb9a57;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+.flex-equal > * {
+    flex: 1;
+}
+@media only screen and (min-width: 768px) {
+    .flex-md-equal > * {
+        flex: 1;
+    }
+}
+
+.primaryFitBgColor {
+    background-color: var(--primary_fit_bgColor);
+}
+.healthcareFitBgColor {
+    background-color: var(--healthcare_color);
+}
+.primaryFitTxtColor {
+    color: var(--primary_fit_txtColor);
+}
+.secondaryFitTxtColor {
+    color: var(--secondary_fit_txtColor);
+}
+.healthcareTxtColor {
+    color: var(--healthcare_color);
+}
+
+.healthcare__dot {
+    position: relative;
+}
+.healthcare__dot::before {
+    content: '';
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    margin-right: 10px;
+    background: var(--healthcare_color);
+    border-radius: 15px;
+}
+.healthcare__underline {
+    position: relative;
+}
+.healthcare__underline:after {
+    content: "";
+    display: block;
+    width: 50%;
+    padding-top: 5px;
+    border-bottom: 3px solid var(--healthcare_color);
+}
+
+
+
+
+/* home page */
+.navbar-brand img {
+    width: 280px;
+}
+.section1Img,
+.section2Img,
+.section3Img,
+.section4Img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.section1Img::before,
+.section2Img::before,
+.section3Img::before,
+.section4Img::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+.section1Img::before {
+    background: url(../images/Fit-Web-icons-10.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.section2Img::before {
+    background: url(../images/wellbeing-of-employee.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section3Img::before {
+    background: url(../images/Work-better.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section4Img::before {
+    background: url(../images/Health-status.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section {
+    width: 100%;
+    overflow: hidden;
+}
+section.section1 {
+    position: relative;
+}
+section.section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    height: 3px;
+    background: white;
+}
+section.section5 ul li {
+    color: var(--secondary_fit_txtColor);
+}
+section.section6 .button {
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    height: 35px;
+    padding: 10px 20px;
+    line-height: 15px;
+    text-align: center;
+    width: 220px;
+    text-decoration: none;
+}
+section.section6 .button1 {
+    background: linear-gradient(#f08d3a, #f7c780);
+    box-shadow: 0px 0px 4px 2px #f08d3a;
+}
+section.section6 .button2 {
+    background: linear-gradient(#a0ba73, #8fae5b);
+    box-shadow: 0px 0px 4px 2px #a0ba73;
+}
+section.section6 .button4 {
+    background: #4fbffc;
+    box-shadow: 0px 0px 4px 2px #4fbffc;
+}
+section.section6 .button3 {
+    box-shadow: 0 -1px 15px 1px grey;
+    background: white;
+    height: 50px;
+    line-height: 35px;
+    border-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: var(--secondary_fit_txtColor);
+    letter-spacing: .5px;
+    font-size: 12px;
+}
+
+
+
+/* Mobile devices */
+@media (max-width: 768px) {  
+    .section1Img,
+    .section2Img,
+    .section3Img,
+    .section4Img {
+        height: 250px;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    section.section6 .container {
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+        width: 100%;
+    }
+    section.section6 .button1 {
+
+    }
+    section.section6 .button2 {
+
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width: 992px) {  
+    .section1Img,
+    .section2Img,
+    .section3Img,
+    .section4Img {
+        height: 262px;
+        width: 60%;
+        margin: 0px auto;
+    }
+}
+ 
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .section1Img,
+    .section2Img,
+    .section3Img,
+    .section4Img {
+        height: 236px;
+        width: 100%;
+    }
+    
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .section1Img,
+    .section2Img,
+    .section3Img,
+    .section4Img {
+        height: 336px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*  contact us page  */
+section.contact__us {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section.contact__us .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.contact__us label {
+    font-size: 12px;
+}
+section.contact__us input {
+    padding: 10px 20px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+}
+section.contact__us .contact_underline {
+    position: relative;
+}
+section.contact__us .contact_underline:after {
+    content: "";
+    display: block;
+    width: 50%;
+    padding-top: 35px;
+    border-bottom: 1px solid var(--healthcare_color);
+    margin: 0px auto;
+}
+
+
+
+
+
+/*  pricing page  */
+section.pricing_page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section.pricing_page .inner {
+    
+}
+section.pricing_page .pricing_underline {
+    position: relative;
+}
+section.pricing_page .pricing_underline:after {
+    content: "";
+    display: block;
+    width: 90%;
+    padding-top: 15px;
+    border-bottom: 2px solid #f5ab47;
+}
+section.pricing_page .txtSketch {
+    letter-spacing: 1px;
+    color: #f5aa47;
+}
+section.pricing_page .pricing {
+    width: 320px;
+    height: auto;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
+section.pricing_page .pricing .pricing-header {
+    height: 190px;
+    background: #f6a447;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+section.pricing_page .pricing .pricing-header::before {
+    content: "";
+    height: 50%;
+    background: #f6a447;
+    border-radius: 15px;
+    width: 56%;
+    position: absolute;
+    top: 58%;
+    left: 42%;
+    z-index: -1;
+    transform: rotate(168deg);
+}
+section.pricing_page .pricing .pricing-header::after {
+    content: "";
+    height: 50%;
+    background: #f6a447;
+    border-radius: 15px;
+    width: 54%;
+    position: absolute;
+    top: 59%;
+    right: 44.2%;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+section.pricing_page .pricing .pricing-header .pricing-header-title {
+    
+}
+section.pricing_page .pricing .pricing-header .pricing-header-title h3 {
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+section.pricing_page .pricing .pricing-header .pricing-header-badge {
+    
+}
+section.pricing_page .pricing .pricing-header .pricing-header-badge span {
+    font-size: 10px;
+    width: 75%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0px;
+}
+section.pricing_page .pricing .pricing-body {
+    background: #fefefe;
+    width: 90%;
+    margin: 0px auto;
+    box-shadow: 1px 1px 6px 0px darkgrey;
+    border-radius: 20px;
+    margin-top: -70px;
+    z-index: -2;
+    min-height: 570px;
+    height: auto;
+}
+section.pricing_page .pricing .pricing-body .pricing-body-top {
+    height: 170px;
+}
+section.pricing_page .pricing .pricing-body .pricing-body-body {
+    
+}
+section.pricing_page .pricing .pricing-body .pricing-body-body ul li {
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #606060;
+    line-height: 26px;
+}
+section.pricing_page .pricing .pricing-body .pricing-body-body ul li span {
+    margin-left: 10px;
+}
+section.pricing_page .pricing .pricing-body .pricing-body-body ul li:nth-of-type(odd){
+    background: #ebebeb9c;
+}
+section.pricing_page .pricing .pricing-body .pricing-body-body ul li:nth-of-type(even){
+    background: #d4d4d4;
+}
+section.pricing_page .pricing .pricing-body .pricing-body-footer {
+    height: 60px;
+}
+section.pricing_page .pricing .pricing-footer {
+
+}
+section.pricing_page .pricing .pricing-footer a {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 56%;
+    background: #f6a747;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    position: absolute;
+    top: -30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+section.pricing_page .healthcare___dot {
+    position: relative;
+}
+section.pricing_page .healthcare___dot::before {
+    content: '✔';
+    display: contents;
+    height: 10px;
+    margin-right: 10px;
+}
+
+section.pricing_page .pricing2 .pricing-header {
+    background: #f6a447;
+}
+section.pricing_page .pricing2 .pricing-header::before {
+    background: #f6a447;
+}
+section.pricing_page .pricing2 .pricing-header::after {
+    background: #f6a447;
+}
+section.pricing_page .pricing2 .pricing-header .pricing-header-title h3 {
+    color: white;
+}
+section.pricing_page .pricing2 .pricing-footer a {
+    color: white;
+    background-color: #f6a447;
+}
+
+section.pricing_page .pricing3 .pricing-header {
+    background: #f6a447;
+}
+section.pricing_page .pricing3 .pricing-header::before {
+    background: #f6a447;
+}
+section.pricing_page .pricing3 .pricing-header::after {
+    background: #f6a447;
+}
+section.pricing_page .pricing3 .pricing-header .pricing-header-title h3 {
+    color: white;
+}
+section.pricing_page .pricing3 .pricing-footer a {
+    color: white;
+    background-color: #f6a447;
+}
+@media (max-width: 930px) {
+    section.pricing_page {
+        height: 100%;
+    }
+    section.pricing_page .pricing {
+        margin: 40px auto;
+    }
+}
